@@ -1,0 +1,143 @@
+* ,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header .nav-container {
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+
+
+
+    padding-block: 1rem;
+    font-family: 'Quicksand', sans-serif;
+
+    align-items: center;
+    z-index: 9999;
+}
+
+.nav-container .nav-list{
+    padding-left: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.nav-container .nav-list li {
+    list-style: none;
+
+}
+
+.nav-container .nav-list li.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+.nav-container .nav-list li a {
+    font-size: 1.05rem;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: black;
+}
+
+.nav-container .nav-list li a:hover {
+    border-radius: 99px;
+
+    color: white;
+    background-color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+main{
+    flex: 1;
+
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-block: 2rem 4rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+main .content{
+    flex: 1;
+
+    padding: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+main .content #hobby{
+    padding: 0.5rem;
+}
+main .content #Skill{
+    padding: 0.5rem;
+}
+
+
+main .profile{
+    flex: 1 1;
+    margin-block: 1rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+main .profile .logo{
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+main .profile .logo img{
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+
+    background-color: black;
+    color: white;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
