@@ -1,10 +1,10 @@
-* ,
+*,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     height: 100dvh;
@@ -18,9 +18,8 @@ header .nav-container {
     position: sticky;
     justify-content: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200dvw;
     margin-inline: auto;
-
 
 
     padding-block: 1rem;
@@ -30,7 +29,7 @@ header .nav-container {
     z-index: 9999;
 }
 
-.nav-container .nav-list{
+.nav-container .nav-list {
     padding-left: 0;
 
     display: flex;
@@ -71,12 +70,11 @@ header .nav-container {
 }
 
 
-
-main{
+main {
     flex: 1;
 
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200dvw;
     margin-inline: auto;
     padding-block: 2rem 4rem;
 
@@ -86,7 +84,7 @@ main{
     gap: 2rem;
 }
 
-main .content{
+main .content {
     flex: 1;
 
     padding: 2rem;
@@ -95,15 +93,40 @@ main .content{
     gap: 10px;
 }
 
-main .content #hobby{
+@media only screen and (max-width: 720px) {
+
+    .nav-container {
+        display: flex;
+
+    }
+
+    .nav-container .nav-list {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        flex: 1;
+
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+}
+
+main .content #hobby {
     padding: 0.5rem;
 }
-main .content #Skill{
+
+main .content #Skill {
     padding: 0.5rem;
 }
 
 
-main .profile{
+main .profile {
     flex: 1 1;
     margin-block: 1rem;
 
@@ -112,14 +135,14 @@ main .profile{
     align-items: center;
 }
 
-main .profile .logo{
+main .profile .logo {
     flex: 1 1;
     display: flex;
     justify-content: center;
 
 }
 
-main .profile .logo img{
+main .profile .logo img {
     width: 100px;
     height: 100px;
 
@@ -127,17 +150,64 @@ main .profile .logo img{
     border-radius: 50%;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
+
+    flex-flow: column wrap;
 
     background-color: black;
     color: white;
+
 }
 
-footer p {
+footer .slider {
+    width: 100%;
+    border: 1px red solid;
+}
+
+footer .list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+footer .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+
+    border: 1px blue solid;
+    animation: slide 10s linear infinite;
+    animation-delay: calc((10s / var(--quantity)) * var(--position) - 1);
+}
+
+footer .list .item p {
+    width: 100%;
+}
+
+@keyframes slide {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    footer .marquee .marquee-content ul {
+        display: inline-block;
+    }
+
+    footer .marquee .marquee-content ul li {
+        display: inline-block;
+        margin: 0 1rem 0 1rem;
+        text-decoration: none;
+        list-style: none;
+        animation: slide 10s linear infinite;
+        animation-delay: calc((10s / var(--quantity)) * var(--position) - 1);
+    }
 }
