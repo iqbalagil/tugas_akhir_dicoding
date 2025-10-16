@@ -154,46 +154,67 @@ footer {
     display: flex;
     justify-content: center;
 
-    flex-flow: column wrap;
-
-    background-color: black;
-    color: white;
+    flex-flow: column nowrap;
 
 }
 
 footer .slider {
     width: 100%;
-    border: 1px red solid;
+    overflow: hidden;
+    mask-image: linear-gradient(
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+);
 }
 
-footer .list {
-    display: flex;
-    width: 100%;
-    min-width: calc(var(--width) * var(--quantity));
+footer .marquee {
     position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1;
+    justify-content: center;
+
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    white-space: nowrap;
 }
 
-footer .list .item {
-    width: var(--width);
-    height: var(--height);
-    position: absolute;
-    left: 100%;
+footer .footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
 
-    border: 1px blue solid;
-    animation: slide 10s linear infinite;
+footer .marquee .marquee-content {
+    display: flex;
+    flex-flow: row nowrap;
+    scroll-behavior: smooth;
+    gap: 17rem;
+}
+
+footer .marquee .marquee-content ul {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 17rem;
+    padding: 0;
+    width: max-content;
+    animation: slide 5s linear infinite;
     animation-delay: calc((10s / var(--quantity)) * var(--position) - 1);
+
 }
 
-footer .list .item p {
-    width: 100%;
+footer .marquee .marquee-content ul li {
+    text-decoration: none;
+    list-style: none;
 }
 
 @keyframes slide {
-    from {
-        left: 100%;
-    }
-    to {
-        left: calc(var(--width) * -1);
+    to{
+        transform: translate(calc(-50% + 25rem));
     }
 }
 
@@ -207,7 +228,7 @@ footer .list .item p {
         margin: 0 1rem 0 1rem;
         text-decoration: none;
         list-style: none;
-        animation: slide 10s linear infinite;
+        animation: slide 15s linear infinite;
         animation-delay: calc((10s / var(--quantity)) * var(--position) - 1);
     }
 }
