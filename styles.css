@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -22,7 +24,7 @@ header .nav-container {
     margin-inline: auto;
 
 
-    padding-block: 1rem;
+    padding-block: 0.25rem;
     font-family: 'Quicksand', sans-serif;
 
     align-items: center;
@@ -35,20 +37,28 @@ header .nav-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+
 
     gap: 20px;
 }
 
 .nav-container .nav-list li {
     list-style: none;
-
 }
 
 .nav-container .nav-list li.logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    align-content: center;
+}
+
+.nav-container .nav-list li.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: -100% 0;
 }
 
 .nav-container .nav-list li a {
@@ -71,26 +81,64 @@ header .nav-container {
 
 
 main {
-    flex: 1;
-
-    width: 100%;
-    max-width: 1200dvw;
-    margin-inline: auto;
-    padding-block: 2rem 4rem;
-
-    display: flex;
-    align-items: center;
-
-    gap: 2rem;
+    max-width: 100dvw;
 }
 
-main .content {
-    flex: 1;
+main #home.content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+    background-color: black;
+}
 
-    padding: 2rem;
+main #home.content .sideLeft{
+    flex: 1;
     display: flex;
     flex-flow: column wrap;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+main #home.content .sideRight {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main #home.content .sideRight .sideRight-content {
+    flex: 1 1;
+    gap: 2.5rem;
+    margin: 1rem 1rem 1rem;
+}
+
+main #home.content .sideRight .sideRight-content img{
+    width: 500px;
+    height: 500px;
+    backdrop-filter: invert(100%) brightness(20%);
+}
+
+main #home.content .sideLeft .sideLeft-content {
+    flex: 1 1;
+    color: white;
+    gap: 2.5rem;
+    margin: 1rem 1rem 1rem;
+}
+main #home.content .sideLeft .sideLeft-content p{
+    font-family: 'Merriweather', serif;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+main #home.content .sideLeft .sideLeft-content h1{
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 @media only screen and (max-width: 720px) {
@@ -109,10 +157,7 @@ main .content {
     }
 
     main {
-        flex: 1;
-
-        display: flex;
-        flex-flow: row wrap;
+        max-width: 100dvw;
     }
 
 }
@@ -125,30 +170,43 @@ main .content #Skill {
     padding: 0.5rem;
 }
 
-
-main .profile {
-    flex: 1 1;
-    margin-block: 1rem;
-
+main #article.content{
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-}
-
-main .profile .logo {
-    flex: 1 1;
-    display: flex;
+    flex:1;
     justify-content: center;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+main #article.content .card{
+    flex: 1;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    padding: 0.2rem;
+    border-radius: 16px;
+}
+
+main #article.content .card:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+main #article.content .card article{
+    padding: 0.5rem;
+}
+
+main #article.content .card article h2{
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
 
 }
 
-main .profile .logo img {
-    width: 100px;
-    height: 100px;
-
-    object-fit: cover;
-    border-radius: 50%;
-}
 
 footer {
     display: flex;
@@ -158,18 +216,12 @@ footer {
 
 }
 
-footer .slider {
+ .slider {
     width: 100%;
     overflow: hidden;
-    mask-image: linear-gradient(
-            to right,
-            transparent,
-            #000 10% 90%,
-            transparent
-);
 }
 
-footer .marquee {
+ .marquee {
     position: relative;
     display: flex;
     flex-flow: row nowrap;
@@ -177,26 +229,26 @@ footer .marquee {
     justify-content: center;
 
     overflow: hidden;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     white-space: nowrap;
 }
 
-footer .footer-text {
+ .footer-text {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
 }
 
-footer .marquee .marquee-content {
+ .marquee .marquee-content {
     display: flex;
     flex-flow: row nowrap;
     scroll-behavior: smooth;
     gap: 17rem;
 }
 
-footer .marquee .marquee-content ul {
+ .marquee .marquee-content ul {
     display: flex;
     flex-flow: row nowrap;
     gap: 17rem;
@@ -207,28 +259,29 @@ footer .marquee .marquee-content ul {
 
 }
 
-footer .marquee .marquee-content ul li {
+ .marquee .marquee-content ul li {
     text-decoration: none;
     list-style: none;
 }
 
 @keyframes slide {
     to{
-        transform: translate(calc(-50% + 25rem));
+        transform: translate(calc(-60% + 15rem));
     }
 }
 
 @media only screen and (max-width: 625px) {
-    footer .marquee .marquee-content ul {
-        display: inline-block;
+
+     .marquee .marquee-content ul {
+        display: flex;
+        margin: 0;
     }
 
-    footer .marquee .marquee-content ul li {
+     .marquee .marquee-content ul li {
         display: inline-block;
-        margin: 0 1rem 0 1rem;
         text-decoration: none;
         list-style: none;
-        animation: slide 15s linear infinite;
-        animation-delay: calc((10s / var(--quantity)) * var(--position) - 1);
+        animation: slide 10s linear infinite;
+        /*animation-delay: calc((10s / var(--quantity)) * var(--position) - 1);*/
     }
 }

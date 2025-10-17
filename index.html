@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>Title</title>
 </head>
@@ -15,130 +15,208 @@
         <ul class="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#article">Article</a></li>
-            <li class="logo"><img alt="logo"></li>
+            <li class="logo"><img alt="logo" src="assets/62.jpg"></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#none">None</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <div class="content">
-        <article id="hobby">
-            <h1>Hobby</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusamus, asperiores.
-            </p>
-        </article>
-        <article id="Skill">
-            <h1>Skill</h1>
-            <p>
-                lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-        </article>
-    </div>
-    <aside class="profile">
-        <div class="logo">
-            <img alt="logo" src="assets/logoPerson.jpg">
+    <div class="content" id="home">
+        <div class="sideLeft">
+            <div class="sideLeft-content">
+                <h1>Moscow Dimitry</h1>
+                <p>Welcome, i explore fresh ideas, share inspiring stories, and offer insights to
+                    help you grow, learn, and stay inspired every day. Whether it’s about lifestyle, creativity, or
+                    self-improvement, our goal is to bring you thoughtful content that sparks curiosity and keeps you
+                    coming back for more. Dive in, explore, and join us on this journey of discovery and connection.
+                </p>
+            </div>
         </div>
-        <article>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
-        </article>
-    </aside>
+        <div class="mainMiddle">
+            <div class="mainMiddle-content">
+            </div>
+        </div>
+        <div class="sideRight">
+            <div class="sideRight-content">
+                <img alt="main-image" src="assets/pose2.png"/>
+            </div>
+        </div>
+    </div>
+    <div id="marquee">
+        <hr style="width: 100%; height: 1px; background-color: #000000; border: none;">
+        <div class="slider"
+             style="
+    --width: 100%;
+    --height: 100%;
+    --quantity: 14;">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <ul>
+                        <li style="--position: 1">
+                            <p>
+                                Lifestyle
+                            </p>
+                        </li>
+                        <li style="--position: 2">
+                            <p>
+                                Art
+                            </p>
+                        </li>
+                        <li style="--position: 3">
+                            <p>
+                                Journal
+                            </p>
+                        </li>
+                        <li style="--position: 4 ">
+                            <p>
+                                Photo
+                            </p>
+                        </li>
+                        <li style="--position: 5">
+                            <p>
+                                Travel
+                            </p>
+                        </li>
+                        <li style="--position: 6">
+                            <p>
+                                Hobby
+                            </p>
+                        </li>
+                        <li style="--position: 7">
+                            <p>
+                                Meditate
+                            </p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li style="--position: 1">
+                            <p>
+                                Lifestyle
+                            </p>
+                        </li>
+                        <li style="--position: 2">
+                            <p>
+                                Art
+                            </p>
+                        </li>
+                        <li style="--position: 3">
+                            <p>
+                                Journal
+                            </p>
+                        </li>
+                        <li style="--position: 4 ">
+                            <p>
+                                Photo
+                            </p>
+                        </li>
+                        <li style="--position: 5">
+                            <p>
+                                Travel
+                            </p>
+                        </li>
+                        <li style="--position: 6">
+                            <p>
+                                Hobby
+                            </p>
+                        </li>
+                        <li style="--position: 7">
+                            <p>
+                                Meditate
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="width: 100%; height: 1px; background-color: #000000; border: none;">
+        </div>
+    </div>
+
+    <div class="content" id="article">
+        <div class="card">
+            <article>
+            <h2>
+                Article
+            </h2>
+                <span>
+                    Lorem ipsum dolor sit amet.
+                </span>
+            </article>
+            <aside>
+                <img src="assets/">
+            </aside>
+        </div>
+        <div class="card">
+            <article>
+                <h2>
+                    Article
+                </h2>
+                <span>
+                    Lorem ipsum dolor sit amet.
+                </span>
+            </article>
+            <aside>
+                <img src="assets/">
+            </aside>
+        </div>
+        <div class="card">
+            <article>
+                <h2>
+                    Article
+                </h2>
+                <span>
+                    Lorem ipsum dolor sit amet.
+                </span>
+            </article>
+            <aside>
+                <img src="assets/">
+            </aside>
+        </div>
+        <div class="card">
+            <article>
+                <h2>
+                    Article
+                </h2>
+                <span>
+                    Lorem ipsum dolor sit amet.
+                </span>
+            </article>
+            <aside>
+                <img src="assets/">
+            </aside>
+        </div>
+        <div class="card">
+            <article>
+                <h2>
+                    Article
+                </h2>
+                <span>
+                    Lorem ipsum dolor sit amet.
+                </span>
+            </article>
+            <aside>
+                <img src="assets/">
+            </aside>
+        </div>
+        <div class="card">
+            <article>
+                <h2>
+                    Article
+                </h2>
+                <span>
+                    Lorem ipsum dolor sit amet.
+                </span>
+            </article>
+            <aside>
+                <img src="assets/">
+            </aside>
+        </div>
+    </div>
 </main>
 
 
 <footer>
-    <div class="slider"
-    style="
-    --width: 100%;
-    --height: 100%;
-    --quantity: 14;">
-        <div class="marquee">
-            <div class="marquee-content">
-                <ul>
-                    <li style="--position: 1">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 2">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 3">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 4 ">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 5">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 6">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 7">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                </ul>
-                <ul>
-                    <li style="--position: 1">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 2">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 3">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 4 ">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 5">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 6">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                    <li style="--position: 7">
-                        <p>
-                            Morgana
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+
 
     <p class="footer-text">
         Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit &copy;quisque
