@@ -94,7 +94,7 @@ main #home.content {
     background-color: black;
 }
 
-main #home.content .sideLeft{
+main #home.content .sideLeft {
     flex: 1;
     display: flex;
     flex-flow: column wrap;
@@ -117,7 +117,7 @@ main #home.content .sideRight .sideRight-content {
     margin: 1rem 1rem 1rem;
 }
 
-main #home.content .sideRight .sideRight-content img{
+main #home.content .sideRight .sideRight-content img {
     width: 500px;
     height: 500px;
     backdrop-filter: invert(100%) brightness(20%);
@@ -129,13 +129,14 @@ main #home.content .sideLeft .sideLeft-content {
     gap: 2.5rem;
     margin: 1rem 1rem 1rem;
 }
-main #home.content .sideLeft .sideLeft-content p{
+
+main #home.content .sideLeft .sideLeft-content p {
     font-family: 'Merriweather', serif;
     font-weight: lighter;
     font-size: 1.2rem;
 }
 
-main #home.content .sideLeft .sideLeft-content h1{
+main #home.content .sideLeft .sideLeft-content h1 {
     font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 2.5rem;
@@ -170,9 +171,9 @@ main .content #Skill {
     padding: 0.5rem;
 }
 
-main #article.content{
+main #article.content {
     display: flex;
-    flex:1;
+    flex: 1;
     justify-content: center;
     flex-direction: row;
     padding: 1rem;
@@ -180,8 +181,10 @@ main #article.content{
     flex-wrap: wrap;
 }
 
-main #article.content .card{
+main #article.content .card {
     flex: 1;
+    display: flex;
+    flex-flow: row wrap;
     background-color: black;
     color: white;
     justify-content: center;
@@ -189,39 +192,77 @@ main #article.content .card{
     border-radius: 16px;
 }
 
-main #article.content .card:hover{
+main #article.content .card:hover {
     background-color: white;
     color: black;
     transition: all 0.3s ease-in-out;
 }
 
-main #article.content .card article{
+main #article.content .card article {
     padding: 0.5rem;
 }
 
-main #article.content .card article h2{
+main #article.content .card article h2 {
     font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 2.5rem;
     text-align: center;
-
 }
 
+main #article.content .card article p {
+    position: relative;
+    top: 10px;
+}
+
+main #article.content .card aside {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+main #article.content .card aside img {
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+    object-fit: cover;
+    align-items: end;
+}
+
+main #contact.content{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+main #contact.content .card{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    border-radius: 16px;
+    padding: 1rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
+}
+
+main #contact.content
 
 footer {
     display: flex;
     justify-content: center;
 
     flex-flow: column nowrap;
+    background-color: black;
+    color: white;
 
 }
 
- .slider {
+.slider {
     width: 100%;
     overflow: hidden;
 }
 
- .marquee {
+.marquee {
     position: relative;
     display: flex;
     flex-flow: row nowrap;
@@ -234,21 +275,21 @@ footer {
     white-space: nowrap;
 }
 
- .footer-text {
+.footer-text {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
 }
 
- .marquee .marquee-content {
+.marquee .marquee-content {
     display: flex;
     flex-flow: row nowrap;
     scroll-behavior: smooth;
     gap: 17rem;
 }
 
- .marquee .marquee-content ul {
+.marquee .marquee-content ul {
     display: flex;
     flex-flow: row nowrap;
     gap: 17rem;
@@ -259,25 +300,25 @@ footer {
 
 }
 
- .marquee .marquee-content ul li {
+.marquee .marquee-content ul li {
     text-decoration: none;
     list-style: none;
 }
 
 @keyframes slide {
-    to{
+    to {
         transform: translate(calc(-60% + 15rem));
     }
 }
 
 @media only screen and (max-width: 625px) {
 
-     .marquee .marquee-content ul {
+    .marquee .marquee-content ul {
         display: flex;
         margin: 0;
     }
 
-     .marquee .marquee-content ul li {
+    .marquee .marquee-content ul li {
         display: inline-block;
         text-decoration: none;
         list-style: none;
